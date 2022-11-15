@@ -613,11 +613,11 @@ header {
     height: 0;
     overflow: hidden;
   }
-  .skills_open .skills__list{
+  .skills__open .skills__list{
     height: max-content;
     margin-bottom: var(--mb-2-5);
   }
-  .skills_open .skills__arrow{
+  .skills__open .skills__arrow{
     transform: rotate(-180deg);
   }
 /* .skills__container-img {
@@ -826,34 +826,21 @@ header {
   padding: 0 1.5rem;
 }
 
+ 
 .portfolio__img {
   width: 265px;
   border-radius: 0.5rem;
   justify-self: center;
 }
-
-.portfolio__title {
-  font-size: var(--h3-font-size);
-  margin-bottom: var(--mb-0-5);
-}
-
-.portfolio__description {
-  margin-bottom: var(--mb-0-75);
-}
-
-.portfolio__button:hover .button__icon {
-  transform: translateX(0.25rem);
-}
-
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  content: "";
+  content: '';
 }
-
 .swiper-portfolio-icon {
   font-size: 2rem;
   color: var(--first-color);
 }
+
 
 .swiper-button-prev {
   left: -0.5rem;
@@ -876,6 +863,12 @@ header {
 .swiper-pagination-bullet {
   outline: none;
 }
+
+
+
+
+
+ 
 /*==================== PROJECT IN MIND ====================*/
 
 .project {
@@ -899,9 +892,10 @@ header {
 .project__img {
   width: 232px;
   justify-self: center;
+  padding-bottom: 2.5em;
 }
 
-/*==================== TESTIMONIAL ====================*/
+
 
 /*==================== CONTACT ME ====================*/
 
