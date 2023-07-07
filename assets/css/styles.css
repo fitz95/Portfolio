@@ -864,11 +864,9 @@ header {
   outline: none;
 }
 
+/*==================== PORTFOLIO 22 ====================*/
 
 
-
-
- 
 /*==================== PROJECT IN MIND ====================*/
 
 .project {
@@ -1292,3 +1290,5 @@ header {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+
