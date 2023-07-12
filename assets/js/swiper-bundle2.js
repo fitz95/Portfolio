@@ -6,7 +6,7 @@ var radiosLength;
 var interval = setInterval(handleNext, TIMEOUT);
 
 function handleNext() {
-  
+  debugger;
    $radios = $('input[class*="slide-radio"]');
    $activeRadio = $('input[class*="slide-radio"]:checked');
 
@@ -38,17 +38,10 @@ function myStopFunction() {
 }
 
 $('.slider').hover(function(){
-  
+  debugger;
   myStopFunction()
 });
 
 $('.slider').mouseleave(function() {
  interval = setInterval(handleNext, TIMEOUT);
 });
-
-$(document).ready(function() {
-    $('.slider-pagination label').click(function(e) {
-      e.preventDefault(); // Prevent the default behavior of the label click event
-    });
-  });
-  

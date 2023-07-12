@@ -912,7 +912,7 @@ header {
   left: 0;
 }
 .slide-2 {
-  background: #a9785c;
+  background: #9370db;
   left: 100%
 }
 .slide-3 {
@@ -923,11 +923,16 @@ header {
   background: #b1a494;
   left: 300%;
 }
+.slide-5 {
+  background: #63c5da;
+  left: 400%;
+}
 .slider {
   display: flex;
   justify-content: flex-start;
 }
 .slider-content {
+  z-index: 101;
   width: 635px;
   padding-left: 100px;
 }
@@ -946,10 +951,11 @@ header {
   transform: translateX(500px);
   margin-top: 0;
   letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow to improve visibility */
 }
  
 .slider h4 {
-  font-size: 22px;
+  font-size: 28px;
   font-family: "Oswald";
   color: rgba(51, 51, 51, 0.349);
   font-weight: bold;
@@ -958,20 +964,17 @@ header {
   opacity: 0;
   -webkit-transform: translateX(500px);
   transform: translateX(500px);
+  font-weight: bold;
 }
  
 .slider > img {
   position: absolute;
-  right: 10%;
+  right: 0;
   bottom: 0;
   height: 100%;
   opacity: 0;
   -webkit-transform: translateX(500px);
   transform: translateX(500px);
-}
- 
-.slide-1 > img {
-  right: 0;
 }
  
 .buy-now-btn {
@@ -996,13 +999,21 @@ header {
 }
  
 .buy-now-btn:after {
-  content: 'Buy Now';
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
   position: absolute;
   right: 35px;
   top: 18px;
+}
+
+.project__social-icon {
+  font-size: 2.25rem;
+  color: var(--first-color);
+}
+
+.project__social-icon:hover {
+  color: var(--first-color-alt);
 }
  
 .slider .buy-now-btn:focus,
@@ -1048,7 +1059,7 @@ header {
 }
  
 .number-pagination span:after {
-  content: "/4";
+  content: "/5";
   font-size: 16px;
   color: #fff;
 }
@@ -1058,6 +1069,11 @@ header {
   background-color: #9ea6b3;
   position: relative;
   
+}
+
+.slider-img{
+  width: 100%;
+  height: auto;
 }
 
 /*Awesome! Now, style the slider pagination.*/
@@ -1085,6 +1101,7 @@ header {
 }
 
 .css-slider-wrapper input {
+  display: none;
   position: absolute;
   opacity: 0;
   width: 100%;
@@ -1097,7 +1114,8 @@ header {
 .slide-radio1:checked ~ .slider-pagination .page1,
 .slide-radio2:checked ~ .slider-pagination .page2,
 .slide-radio3:checked ~ .slider-pagination .page3,
-.slide-radio4:checked ~ .slider-pagination .page4 {
+.slide-radio4:checked ~ .slider-pagination .page4,
+.slide-radio5:checked ~ .slider-pagination .page5 {
   width: 14px;
   height: 14px;
   border: 2px solid #ea2e49;
@@ -1121,22 +1139,29 @@ header {
   -webkit-transform: translateX(-300%);
   transform: translateX(-300%);
 }
+.slide-radio5:checked ~ .slider {
+  -webkit-transform: translateX(-400%);
+  transform: translateX(-400%);
+}
  
 .slide-radio1:checked ~ .slide-1 h2,
 .slide-radio2:checked ~ .slide-2 h2,
 .slide-radio3:checked ~ .slide-3 h2,
 .slide-radio4:checked ~ .slide-4 h2,
+.slide-radio5:checked ~ .slide-5 h2,
 .slide-radio1:checked ~ .slide-1 h4,
 .slide-radio2:checked ~ .slide-2 h4,
 .slide-radio3:checked ~ .slide-3 h4,
 .slide-radio4:checked ~ .slide-4 h4,
+.slide-radio5:checked ~ .slide-5 h4,
 .slide-radio1:checked ~ .slide-1 > img,
 .slide-radio2:checked ~ .slide-2 > img,
 .slide-radio3:checked ~ .slide-3 > img,
-.slide-radio4:checked ~ .slide-4 > img {
+.slide-radio4:checked ~ .slide-4 > img,
+.slide-radio5:checked ~ .slide-5 > img {
   -webkit-transform: translateX(0);
   transform: translateX(0);
-  opacity: 1
+  opacity: 1;
 }
 
 /* Responsive */
@@ -1149,7 +1174,9 @@ header {
   }
  
   .slider-content {
-    padding: 0 2%
+    padding: 0 2%;
+    position: relative;
+    bottom: 40%;
   }
  
   .navigation {
@@ -1178,12 +1205,13 @@ header {
   }
  
   .slider > img {
-    right: 2%;
+    margin: auto;
+  }
+
+  .project__social-icon {
+    font-size: 1.5rem;
   }
  
-  .slide-1 > img {
-    right: -110px;
-  }
 }
 
 /*==================== PROJECT IN MIND ====================*/
